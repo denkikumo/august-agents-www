@@ -1,55 +1,24 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>August Agents</title>
-  <meta name="description" content="Southern California's Manufacturers' Representative">
-  <link rel="icon" type="image/svg+xml" href="assets/images/AA-Logo.svg">
-  <link rel="stylesheet" href="assets/css/index.css">
-</head>
-<body>
-    <header class="header">
-        <div class="header-content">
-          <div class="logo-hamburger-container">
-            <a href="/" class="logo-container">
-                <img src="assets/images/AA-Logo-White.svg" alt="Logo" class="logo">
-            </a>
-            <button class="hamburger" id="hamburger">
-                &#9776; <!-- Hamburger Icon -->
-            </button>
-        </div>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="/august-agents-www/" class="nav-button-link active">Home</a></li>
-                    <li><a href="/august-agents-www/about" class="nav-button-link">About</a></li>
-                    <li><a href="/august-agents-www/contact" class="nav-button-link ">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-  
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
-
-<div class="sidebar">
-  <div class="logo-container-menu">
-      <img src="assets/images/AA-Logo.svg" class="sidebar-logo">
-  </div>
-  <a href="/august-agents-www/" class="menu-item-link">
-    <button class="menu-item">Home</button>
-  </a>
-  <a href="/august-agents-www/about" class="menu-item-link">
-    <button class="menu-item">About</button>
-  </a>
-  <a href="/august-agents-www/contact" class="menu-item-link">
-    <button class="menu-item">Contact</button>
-  </a>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>August Agents</title>
+    <meta
+      name="description"
+      content="Southern California's Manufacturers' Representative"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/images/AA-Logo.svg" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    {% include navigation.html %}
     <main>
       <div class="slogan-container">
-        <h1>
-          Southern California Manufacturers' Representative
-        </h1>
+        <h1>Southern California Manufacturers' Representative</h1>
       </div>
       <div class="cta-button-container">
         <button class="cta-button" id="scroll-button-electrical">
@@ -58,25 +27,32 @@
         <button class="cta-button" id="scroll-button-lighting">
           Lighting Lines
         </button>
-        <button class="cta-button">
-          Line Cards
-        </button>
+        <button class="cta-button">Line Cards</button>
       </div>
       <div class="hero-img-container">
         <picture>
-            <!-- Large image for desktops -->
-            <source media="(min-width: 1024px)" srcset="assets/images/AA-Illustration.png" alt="August Agents illustration">
-            <!-- Medium image for tablets -->
-            <source media="(min-width: 500px) and (max-width: 1023px)" srcset="assets/images/AA-Illustration-Tablet.png" alt="August Agents illustration">
-            <!-- Default small image for mobile phones -->
-            <img src="assets/images/AA-Illustration-Mobile.png" alt="August Agents illustration">
+          <!-- Large image for desktops -->
+          <source
+            media="(min-width: 1024px)"
+            srcset="assets/images/AA-Illustration.png"
+            alt="August Agents illustration"
+          />
+          <!-- Medium image for tablets -->
+          <source
+            media="(min-width: 500px) and (max-width: 1023px)"
+            srcset="assets/images/AA-Illustration-Tablet.png"
+            alt="August Agents illustration"
+          />
+          <!-- Default small image for mobile phones -->
+          <img
+            src="assets/images/AA-Illustration-Mobile.png"
+            alt="August Agents illustration"
+          />
         </picture>
-    </div>
-    
+      </div>
+
       <div class="category-headline" id="target-section-electrical">
-        <h2>
-          Electrical Lines
-        </h2>
+        <h2>Electrical Lines</h2>
       </div>
       <div class="grid-wrapper">
         <div class="grid-container">
@@ -84,37 +60,45 @@
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://elitecomponents.com/" target="_blank">
-                <img src="assets/images/Elite-Components.png" alt="Elite Components" class="manufacturer-logo">
+                <img
+                  src="assets/images/Elite-Components.png"
+                  alt="Elite Components"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
               <div class="manufacturer-info">
                 <p class="manufacturer-products">
-                  Electrical Fasteners, Plastic Boxes, Strut Accessories, Local Strut & All Thread Inventory
+                  Electrical Fasteners, Plastic Boxes, Strut Accessories, Local
+                  Strut & All Thread Inventory
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA, NV</p>
+                  CA, NV
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $500
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://www.titan3.com/" target="_blank">
-                <img src="assets/images/Titan-3-Technology.png" alt="Titan 3 Technology" class="manufacturer-logo">
+                <img
+                  src="assets/images/Titan-3-Technology.png"
+                  alt="Titan 3 Technology"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -124,57 +108,64 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA, NV</p>
+                  CA, NV
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $1000 / $2000
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://patriotsas.com/" target="_blank">
-                <img src="assets/images/patriotindustries.png" alt="Patriot Industries" class="manufacturer-logo">
+                <img
+                  src="assets/images/patriotindustries.png"
+                  alt="Patriot Industries"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
               <div class="manufacturer-info">
                 <p class="manufacturer-products">
-                  Rigid Aluminum, Rigid Stainless Steel, GRC Elbows, Nipples, Couplings, EMT Elbows
+                  Rigid Aluminum, Rigid Stainless Steel, GRC Elbows, Nipples,
+                  Couplings, EMT Elbows
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA, NV</p>
+                  CA, NV
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> ADD
                 </p>
-              
-              <div class="us-made">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
           <!-- Row 2 -->
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://www.e-zweld.com/" target="_blank">
-                <img src="assets/images/EZ-Weld.png" alt="EZ Weld" class="manufacturer-logo">
+                <img
+                  src="assets/images/EZ-Weld.png"
+                  alt="EZ Weld"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -184,27 +175,30 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA, NV</p>
+                  CA, NV
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> Weight Minimums
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://www.plymouthrubber.com/" target="_blank">
-                <img src="assets/images/Plymouth.png" alt="Plymouth" class="manufacturer-logo">
+                <img
+                  src="assets/images/Plymouth.png"
+                  alt="Plymouth"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -214,50 +208,53 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA, NV</p>
+                  CA, NV
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $2500
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://mulberrymetal.com/" target="_blank">
-                <img src="assets/images/Mulberry.png" alt="Mulberry Metals" class="manufacturer-logo">
+                <img
+                  src="assets/images/Mulberry.png"
+                  alt="Mulberry Metals"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
               <div class="manufacturer-info">
                 <p class="manufacturer-products">
-                  Wall Plates, Weatherproof Boxes, Steel Box Covers, Conduit Bodies
+                  Wall Plates, Weatherproof Boxes, Steel Box Covers, Conduit
+                  Bodies
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA</p>
+                  CA
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $1000
                 </p>
-              
-              <div class="us-made">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
@@ -265,7 +262,11 @@
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://esafab.com/" target="_blank">
-                <img src="assets/images/ESA-Fabrication.png" alt="ESA Fabrication" class="manufacturer-logo">
+                <img
+                  src="assets/images/ESA-Fabrication.png"
+                  alt="ESA Fabrication"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -275,57 +276,64 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA</p>
+                  CA
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> ADD
                 </p>
-              
-              <div class="us-made">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://www.wihatools.com/" target="_blank">
-                <img src="assets/images/Wiha.png" alt="Wiha Tools" class="manufacturer-logo">
+                <img
+                  src="assets/images/Wiha.png"
+                  alt="Wiha Tools"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
               <div class="manufacturer-info">
                 <p class="manufacturer-products">
-                  Electrical Trade Tools, Insulated & Precision Tools, German Made
+                  Electrical Trade Tools, Insulated & Precision Tools, German
+                  Made
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA</p>
+                  CA
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $750
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://spikeelectric.com/" target="_blank">
-                <img src="assets/images/Spike.png" alt="Spike Electric Controls" class="manufacturer-logo">
+                <img
+                  src="assets/images/Spike.png"
+                  alt="Spike Electric Controls"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -335,27 +343,30 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA, NV</p>
+                  CA, NV
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> ADD
                 </p>
-              
-              <div class="us-made">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
           <!-- Row 4 -->
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://www.hightolowvoltage.com/" target="_blank">
-                <img src="assets/images/High-To-Low-Voltage.png" alt="High to Low Voltage" class="manufacturer-logo">
+                <img
+                  src="assets/images/High-To-Low-Voltage.png"
+                  alt="High to Low Voltage"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -365,27 +376,33 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA</p>
+                  CA
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> ADD
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
-              <a href="https://www.delta-therm.com/en-us/default.aspx" target="_blank">
-                <img src="assets/images/Delta-Therm.png" alt="Delta Therm" class="manufacturer-logo">
+              <a
+                href="https://www.delta-therm.com/en-us/default.aspx"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/Delta-Therm.png"
+                  alt="Delta Therm"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -395,27 +412,33 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA, NV</p>
+                  CA, NV
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $2000
                 </p>
-              
-              <div class="us-made">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
-              <a href="https://www.ouellet.com/en-us/default.aspx" target="_blank">
-                <img src="assets/images/Ouellet.png" alt="Ouellet" class="manufacturer-logo">
+              <a
+                href="https://www.ouellet.com/en-us/default.aspx"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/Ouellet.png"
+                  alt="Ouellet"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -425,29 +448,25 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA</p>
+                  CA
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $2000
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
             </div>
-            </div>
           </div>
-
         </div>
       </div>
       <div class="category-headline" id="target-section-lighting">
-        <h2>
-          Lighting Lines
-        </h2>
+        <h2>Lighting Lines</h2>
       </div>
       <div class="grid-wrapper">
         <div class="grid-container">
@@ -455,7 +474,11 @@
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://www.xtralight.com/" target="_blank">
-                <img src="assets/images/XtraLight.svg" alt="Xtra Light" class="manufacturer-logo">
+                <img
+                  src="assets/images/XtraLight.svg"
+                  alt="Xtra Light"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -465,27 +488,30 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA</p>
+                  CA
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $2500
                 </p>
-              
-              <div class="us-made">
-                <img src="/Assets/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://eco-revolution.com/" target="_blank">
-                <img src="assets/images/Eco-Revolution.png" alt="Eco Revolution Lighting" class="manufacturer-logo">
+                <img
+                  src="assets/images/Eco-Revolution.png"
+                  alt="Eco Revolution Lighting"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -495,27 +521,30 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA, NV</p>
+                  CA, NV
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $5000
                 </p>
-              
-              <div class="us-made">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://www.lotusledlights.com/" target="_blank">
-                <img src="assets/images/lotus-led-lights.svg" alt="Lotus LED Lights" class="manufacturer-logo">
+                <img
+                  src="assets/images/lotus-led-lights.svg"
+                  alt="Lotus LED Lights"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -525,27 +554,30 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA</p>
+                  CA
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $1000
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
           <div class="manufacturer-card">
             <div class="manufacturer-logo-container">
               <a href="https://eslvision.com/" target="_blank">
-                <img src="assets/images/ESL-Vision.png" alt="ESL Vision" class="manufacturer-logo">
+                <img
+                  src="assets/images/ESL-Vision.png"
+                  alt="ESL Vision"
+                  class="manufacturer-logo"
+                />
               </a>
             </div>
             <div class="manufacturer-info-container">
@@ -555,55 +587,25 @@
                 </p>
                 <p class="manufacturer-products-sub">
                   <strong>Territory:</strong>
-                   CA</p>
+                  CA
+                </p>
               </div>
               <div class="freight-container">
                 <p class="manufacturer-products-sub">
                   <strong>Freight:</strong> $500
                 </p>
-              
-              <div class="us-made hidden">
-                <img src="assets/images/us-made.png" class="us-made">
-                <p class="card-p">
-                  US Made
-                </p>
+
+                <div class="us-made hidden">
+                  <img src="assets/images/us-made.png" class="us-made" />
+                  <p class="card-p">US Made</p>
+                </div>
               </div>
             </div>
-            </div>
           </div>
-
         </div>
       </div>
     </main>
-    <footer>
-      <div class="footer-location">
-        <img src="assets/images/Map-Vector.svg">
-        <p class="location-text">
-          Based out of
-          <br>
-          <strong>
-            Irvine, California
-          </strong>
-        </br>
-        </p>
-      </div>
-      <div class="footer-contact">
-        <p class="contact-text">
-          <strong>
-            Find Us:
-          </strong>
-        </p>
-        <a href="https://www.linkedin.com/company/august-agents/">
-          <img src="assets/images/LinkedIn.svg" alt="LinkedIn" class="contact-social">
-        </a>
-        <a href="https://www.nemra.org/">
-          <img src="assets/images/Nemra.png" alt="Nemra" class="contact-social">
-        </a>
-      </div>
-      <p class="copyright">
-        © Copyright 2024 August Agents
-      </p>
-    </footer>
+    {% include footer.html %}
     <script src="assets/js/index.js"></script>
-</body>
+  </body>
 </html>
