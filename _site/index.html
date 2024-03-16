@@ -6,10 +6,16 @@
     <title>August Agents</title>
     <meta
       name="description"
-      content="Southern California's Manufacturers' Representative"
+      content="Manufacturers Representative for California & Nevada"
     />
     <link rel="icon" type="image/svg+xml" href="assets/images/AA-Logo.svg" />
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/modal.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <header class="header">
@@ -25,12 +31,18 @@
     </div>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="/" class="nav-button-link">Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Linecards</a>
+          <div class="dropdown-content">
+            <a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">August Agents</a>
+            <a href="/assets/Linecards/ESL Vision Linecard.pdf" target="_blank">ESL Vision</a>
+          </div>
+        </li>
         <li>
           <a href="/about" class="nav-button-link">About</a>
         </li>
         <li>
-          <a href="/contact" class="nav-button-link active">Contact</a>
+          <a href="/contact" class="nav-button-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -56,7 +68,7 @@
 
     <main>
       <div class="slogan-container">
-        <h1>Southern California Manufacturers' Representative</h1>
+        <h1>Manufacturers Representative for California & Nevada</h1>
       </div>
       <div class="cta-button-container">
         <button class="cta-button" id="scroll-button-electrical">
@@ -65,7 +77,7 @@
         <button class="cta-button" id="scroll-button-lighting">
           Lighting Lines
         </button>
-        <button class="cta-button">Line Cards</button>
+          <button class="cta-button hidden" id="lineCardBtn">Line Cards</button>
       </div>
       <div class="hero-img-container">
         <picture>
@@ -644,32 +656,80 @@
       </div>
     </main>
     <footer>
-  <div class="footer-location">
-    <img src="assets/images/Map-Vector.svg" />
+  
+  <div class="footer-contact">
+    <div class="footer-location-container">
+      <img src="assets/images/Map-Vector.svg" />
     <p class="location-text">
-      Based out of
-      <br />
       <strong> Irvine, California </strong>
     </p>
-  </div>
-  <div class="footer-contact">
-    <p class="contact-text">
-      <strong> Find Us: </strong>
-    </p>
-    <a href="https://www.linkedin.com/company/august-agents/">
-      <img
-        src="assets/images/LinkedIn.svg"
-        alt="LinkedIn"
+    </div>
+    <div class="find-us-container">
+      <p class="contact-text">
+        <strong> Find Us: </strong>
+      </p>
+      <a href="https://www.linkedin.com/company/august-agents/" target="_blank">
+        <img
+          src="assets/images/LinkedIn.svg"
+          alt="LinkedIn"
+          class="contact-social"
+        >
+      </a>
+      <a href="https://www.instagram.com/augustagents/" target="_blank">
+        <img src="assets/images/Instagram.svg"
+        alt="Instagram"
         class="contact-social"
-      />
-    </a>
-    <a href="https://www.nemra.org/">
-      <img src="assets/images/Nemra.png" alt="Nemra" class="contact-social" />
-    </a>
+        >
+      </a>
+      <a href="https://www.nemra.org/" target="_blank">
+        <img src="assets/images/Nemra.png" alt="Nemra" class="contact-social" />
+      </a>
+    </div>
   </div>
-  <p class="copyright">© Copyright 2024 August Agents</p>
+  <div class="copyright-container">
+    <p class="copyright">© Copyright 2024 August Agents</p>
+  </div>
 </footer>
-
+ <!-- The Modal -->
+ <div class="modal-container" id="myModal">
+  <div class="modal">
+    <ul class="line-card-list">
+      <li>
+        <a href="/assets/Linecards/ESL Vision Linecard.pdf" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M64 464l48 0 0 48-48 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L229.5 0c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3L384 304l-48 0 0-144-80 0c-17.7 0-32-14.3-32-32l0-80L64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"
+            />
+          </svg>
+          ESL Vision
+        </a>
+        <br />
+      </li>
+      <li>
+        <a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M64 464l48 0 0 48-48 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L229.5 0c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3L384 304l-48 0 0-144-80 0c-17.7 0-32-14.3-32-32l0-80L64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"
+            />
+          </svg>
+          AugustAgents
+        </a>
+        <br />
+      </li>
+    </ul>
+  </div>
+</div>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>

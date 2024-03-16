@@ -29,10 +29,11 @@ document.querySelector('.sidebar').style.left = '-280px';
 this.style.display = 'none'; // Hide overlay
 });
 
-// Carousel //
-
 let slideIndex = 1;
 showSlides(slideIndex);
+
+// Call plusSlides() every 3 seconds (3000 milliseconds)
+let autoSlide = setInterval(function() { plusSlides(1); }, 3000);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
