@@ -461,12 +461,16 @@ h1 {
   display: none;
 }
 
-.footer-location {
-  margin: 3vh 5vw 1vh;
+.footer-location-container {
+  display: flex;
+  justify-content: center;
+  margin: 2vh 0;
 }
 
 .footer-contact {
   margin: 0 5vw;
+  display: block;
+  justify-content: center;
 }
 
 .contact-social {
@@ -474,7 +478,7 @@ h1 {
 }
 
 .copyright {
-  margin: 3vh 5vw;
+  margin: 2vh 8vw;
 }
 }
 
