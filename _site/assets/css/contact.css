@@ -295,6 +295,12 @@ nav li {
   
 }
 
+.footer-location {
+  display: flex;
+  align-items: center;
+  margin: 4vh 0 0 10vw;
+}
+
 .footer-location-container {
   display: flex;
   align-items: center;
