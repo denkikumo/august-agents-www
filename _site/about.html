@@ -8,15 +8,15 @@
       name="description"
       content="Southern California's Manufacturers' Representative"
     />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/AA-Logo.svg" />
-    <link rel="stylesheet" href="/assets/css/about.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/AA-Logo.svg" />
+    <link rel="stylesheet" href="assets/css/about.css" />
   </head>
   <body>
     <header class="header">
   <div class="header-content">
     <div class="logo-hamburger-container">
       <a href="/" class="logo-container">
-        <img src="/assets/images/AA-Logo-White.svg" alt="Logo" class="logo" />
+        <img src="assets/images/AA-Logo-White.svg" alt="Logo" class="logo" />
       </a>
       <button class="hamburger" id="hamburger">
         &#9776;
@@ -25,12 +25,18 @@
     </div>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="/" class="nav-button-link">Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Linecards</a>
+          <div class="dropdown-content">
+            <a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">August Agents</a>
+            <a href="/assets/Linecards/ESL Vision Line Card.pdf" target="_blank">ESL Vision</a>
+          </div>
+        </li>
         <li>
           <a href="/about" class="nav-button-link">About</a>
         </li>
         <li>
-          <a href="/contact" class="nav-button-link active">Contact</a>
+          <a href="/contact" class="nav-button-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -41,7 +47,7 @@
 
 <div class="sidebar">
   <div class="logo-container-menu">
-    <img src="/assets/images/AA-Logo.svg" class="sidebar-logo" />
+    <img src="assets/images/AA-Logo.svg" class="sidebar-logo" />
   </div>
   <a href="/" class="menu-item-link">
     <button class="menu-item">Home</button>
@@ -74,19 +80,19 @@
 
         <div class="carousel-container">
           <div class="carousel-slide fade">
-            <img src="/assets/images/About-Img-1.png" />
+            <img src="assets/images/About-Img-1.png" />
           </div>
           <div class="carousel-slide fade">
-            <img src="/assets/images/About-Img-2.png" />
+            <img src="assets/images/About-Img-2.png" />
           </div>
           <div class="carousel-slide fade">
-            <img src="/assets/images/About-Img-3.png" />
+            <img src="assets/images/About-Img-3.png" />
           </div>
           <div class="carousel-slide fade">
-            <img src="/assets/images/About-Img-4.png" />
+            <img src="assets/images/About-Img-4.png" />
           </div>
           <div class="carousel-slide fade">
-            <img src="/assets/images/About-Img-5.png" />
+            <img src="assets/images/About-Img-5.png" />
           </div>
           <!-- Add more slides as needed -->
 
@@ -99,38 +105,47 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
-            <!-- Add more dots as needed -->
+            <!-- Add more dots aas needed -->
           </div>
         </div>
       </div>
     </main>
     <footer>
-  <div class="footer-location">
-    <img src="/assets/images/Map-Vector.svg" />
+  
+  <div class="footer-contact">
+    <div class="footer-location-container">
+      <img src="assets/images/Map-Vector.svg" />
     <p class="location-text">
-      Based out of
-      <br />
       <strong> Irvine, California </strong>
     </p>
-  </div>
-  <div class="footer-contact">
-    <p class="contact-text">
-      <strong> Find Us: </strong>
-    </p>
-    <a href="https://www.linkedin.com/company/august-agents/">
-      <img
-        src="/assets/images/LinkedIn.svg"
-        alt="LinkedIn"
+    </div>
+    <div class="find-us-container">
+      <p class="contact-text">
+        <strong> Find Us: </strong>
+      </p>
+      <a href="https://www.linkedin.com/company/august-agents/" target="_blank">
+        <img
+          src="assets/images/LinkedIn.svg"
+          alt="LinkedIn"
+          class="contact-social"
+        >
+      </a>
+      <a href="https://www.instagram.com/augustagents/" target="_blank">
+        <img src="assets/images/Instagram.svg"
+        alt="Instagram"
         class="contact-social"
-      />
-    </a>
-    <a href="https://www.nemra.org/">
-      <img src="/assets/images/Nemra.png" alt="Nemra" class="contact-social" />
-    </a>
+        >
+      </a>
+      <a href="https://www.nemra.org/" target="_blank">
+        <img src="assets/images/Nemra.png" alt="Nemra" class="contact-social" />
+      </a>
+    </div>
   </div>
-  <p class="copyright">© Copyright 2024 August Agents</p>
+  <div class="copyright-container">
+    <p class="copyright">© Copyright 2024 August Agents</p>
+  </div>
 </footer>
 
-    <script src="/assets/js/about.js"></script>
+    <script src="assets/js/about.js"></script>
   </body>
 </html>

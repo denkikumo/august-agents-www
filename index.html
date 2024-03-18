@@ -9,47 +9,51 @@
     <title>August Agents</title>
     <meta
       name="description"
-      content="Southern California's Manufacturers' Representative"
+      content="Manufacturers Representative for California & Nevada"
     />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/AA-Logo.svg" />
-    <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="/assets/css/modal.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/AA-Logo.svg" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
   </head>
   <body>
     {% include navigation.html %}
     <main>
       <div class="slogan-container">
-        <h1>Southern California Manufacturers' Representative</h1>
+        <h1>Manufacturers Representative for California & Nevada</h1>
       </div>
-      <div class="cta-button-container">
-        <button class="cta-button" id="scroll-button-electrical">
-          Electrical Lines
-        </button>
-        <button class="cta-button" id="scroll-button-lighting">
-          Lighting Lines
-        </button>
-        <button id="lineCardBtn" class="cta-button">Line Cards</button>
-      </div>
+      
       <div class="hero-img-container">
+        <div class="cta-button-container">
+          <button class="cta-button" id="scroll-button-electrical">
+            Electrical Lines
+          </button>
+          <button class="cta-button" id="scroll-button-lighting">
+            Lighting Lines
+          </button>
+            <button id="lineCardBtn" class="cta-button hidden">Line Cards</button>
+        </div><!--
         <picture>
-          <!-- Large image for desktops -->
+          
           <source
             media="(min-width: 1024px)"
-            srcset="/assets/images/AA-Illustration.png"
+            srcset="assets/images/AA-Illustration.png"
             alt="August Agents illustration"
           />
-          <!-- Medium image for tablets -->
+          
           <source
             media="(min-width: 500px) and (max-width: 1023px)"
-            srcset="/assets/images/AA-Illustration-Tablet.png"
+            srcset="assets/images/AA-Illustration-Tablet.png"
             alt="August Agents illustration"
           />
-          <!-- Default small image for mobile phones -->
+          
           <img
-            src="/assets/images/AA-Illustration-Mobile.png"
+            src="assets/images/AA-Illustration-Mobile.png"
             alt="August Agents illustration"
           />
-        </picture>
+        </picture> -->
       </div>
 
       <div class="category-headline" id="target-section-electrical">
@@ -85,7 +89,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -96,7 +100,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://www.titan3.com/" target="_blank">
                 <img
-                  src="/assets/images/Titan-3-Technology.png"
+                  src="assets/images/Titan-3-Technology.png"
                   alt="Titan 3 Technology"
                   class="manufacturer-logo"
                 />
@@ -118,7 +122,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -129,7 +133,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://patriotsas.com/" target="_blank">
                 <img
-                  src="/assets/images/patriotindustries.png"
+                  src="assets/images/patriotindustries.png"
                   alt="Patriot Industries"
                   class="manufacturer-logo"
                 />
@@ -152,7 +156,7 @@
                 </p>
 
                 <div class="us-made">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -163,7 +167,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://www.e-zweld.com/" target="_blank">
                 <img
-                  src="/assets/images/EZ-Weld.png"
+                  src="assets/images/EZ-Weld.png"
                   alt="EZ Weld"
                   class="manufacturer-logo"
                 />
@@ -185,7 +189,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -196,7 +200,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://www.plymouthrubber.com/" target="_blank">
                 <img
-                  src="/assets/images/Plymouth.png"
+                  src="assets/images/Plymouth.png"
                   alt="Plymouth"
                   class="manufacturer-logo"
                 />
@@ -218,7 +222,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -229,7 +233,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://mulberrymetal.com/" target="_blank">
                 <img
-                  src="/assets/images/Mulberry.png"
+                  src="assets/images/Mulberry.png"
                   alt="Mulberry Metals"
                   class="manufacturer-logo"
                 />
@@ -252,7 +256,7 @@
                 </p>
 
                 <div class="us-made">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -264,7 +268,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://esafab.com/" target="_blank">
                 <img
-                  src="/assets/images/ESA-Fabrication.png"
+                  src="assets/images/ESA-Fabrication.png"
                   alt="ESA Fabrication"
                   class="manufacturer-logo"
                 />
@@ -286,7 +290,7 @@
                 </p>
 
                 <div class="us-made">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -297,7 +301,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://www.wihatools.com/" target="_blank">
                 <img
-                  src="/assets/images/Wiha.png"
+                  src="assets/images/Wiha.png"
                   alt="Wiha Tools"
                   class="manufacturer-logo"
                 />
@@ -320,7 +324,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -331,7 +335,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://spikeelectric.com/" target="_blank">
                 <img
-                  src="/assets/images/Spike.png"
+                  src="assets/images/Spike.png"
                   alt="Spike Electric Controls"
                   class="manufacturer-logo"
                 />
@@ -353,7 +357,7 @@
                 </p>
 
                 <div class="us-made">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -364,7 +368,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://www.hightolowvoltage.com/" target="_blank">
                 <img
-                  src="/assets/images/High-To-Low-Voltage.png"
+                  src="assets/images/High-To-Low-Voltage.png"
                   alt="High to Low Voltage"
                   class="manufacturer-logo"
                 />
@@ -386,7 +390,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -400,7 +404,7 @@
                 target="_blank"
               >
                 <img
-                  src="/assets/images/Delta-Therm.png"
+                  src="assets/images/Delta-Therm.png"
                   alt="Delta Therm"
                   class="manufacturer-logo"
                 />
@@ -422,7 +426,7 @@
                 </p>
 
                 <div class="us-made">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -436,7 +440,7 @@
                 target="_blank"
               >
                 <img
-                  src="/assets/images/Ouellet.png"
+                  src="assets/images/Ouellet.png"
                   alt="Ouellet"
                   class="manufacturer-logo"
                 />
@@ -458,7 +462,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -476,7 +480,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://www.xtralight.com/" target="_blank">
                 <img
-                  src="/assets/images/XtraLight.svg"
+                  src="assets/images/XtraLight.svg"
                   alt="Xtra Light"
                   class="manufacturer-logo"
                 />
@@ -498,7 +502,7 @@
                 </p>
 
                 <div class="us-made">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -509,7 +513,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://eco-revolution.com/" target="_blank">
                 <img
-                  src="/assets/images/Eco-Revolution.png"
+                  src="assets/images/Eco-Revolution.png"
                   alt="Eco Revolution Lighting"
                   class="manufacturer-logo"
                 />
@@ -531,7 +535,7 @@
                 </p>
 
                 <div class="us-made">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -542,7 +546,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://www.lotusledlights.com/" target="_blank">
                 <img
-                  src="/assets/images/lotus-led-lights.svg"
+                  src="assets/images/lotus-led-lights.svg"
                   alt="Lotus LED Lights"
                   class="manufacturer-logo"
                 />
@@ -564,7 +568,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -575,7 +579,7 @@
             <div class="manufacturer-logo-container">
               <a href="https://eslvision.com/" target="_blank">
                 <img
-                  src="/assets/images/ESL-Vision.png"
+                  src="assets/images/ESL-Vision.png"
                   alt="ESL Vision"
                   class="manufacturer-logo"
                 />
@@ -597,7 +601,7 @@
                 </p>
 
                 <div class="us-made hidden">
-                  <img src="/assets/images/us-made.png" class="us-made" />
+                  <img src="assets/images/us-made.png" class="us-made" />
                   <p class="card-p">US Made</p>
                 </div>
               </div>
@@ -606,8 +610,47 @@
         </div>
       </div>
     </main>
-    {% include footer.html %} {% include lineCardModal.html %}
-    <script src="/assets/js/index.js"></script>
-    <script src="/assets/js/modal.js"></script>
+    {% include footer.html %}
+    <!-- The Modal -->
+<div class="modal-container" id="myModal">
+  <div class="modal">
+    <ul class="line-card-list">
+      <li>
+        <a href="/assets/Linecards/ESL Vision Line Card.pdf" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M64 464l48 0 0 48-48 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L229.5 0c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3L384 304l-48 0 0-144-80 0c-17.7 0-32-14.3-32-32l0-80L64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"
+            />
+          </svg>
+          ESL Vision
+        </a>
+        <br />
+      </li>
+      <li>
+        <a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M64 464l48 0 0 48-48 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L229.5 0c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3L384 304l-48 0 0-144-80 0c-17.7 0-32-14.3-32-32l0-80L64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"
+            />
+          </svg>
+          August Agents
+        </a>
+        <br />
+      </li>
+    </ul>
+  </div>
+</div>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/modal.js"></script>
   </body>
 </html>
