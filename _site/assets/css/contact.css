@@ -461,6 +461,11 @@ h1 {
   display: none;
 }
 
+.footer-location {
+  margin: 3vh 5vw 1vh;
+  display: flex;
+}
+
 .footer-location-container {
   display: flex;
   justify-content: center;
