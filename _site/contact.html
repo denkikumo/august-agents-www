@@ -18,9 +18,8 @@
       <a href="/" class="logo-container">
         <img src="assets/images/AA-Logo-White.svg" alt="Logo" class="logo" />
       </a>
-      <button class="hamburger" id="hamburger">
+      <button id="hamburger" onclick="openNav()">
         &#9776;
-        <!-- Hamburger Icon -->
       </button>
     </div>
     <nav class="navbar">
@@ -43,23 +42,18 @@
   </div>
 </header>
 
-<div class="sidebar-overlay" id="sidebar-overlay"></div>
-
-<div class="sidebar">
-  <div class="logo-container-menu">
-    <a href="/">
-      <img src="assets/images/AA-Logo.svg" class="sidebar-logo" />
-    </a>
+<div id="mySidebar" class="sidebar">
+  <img src="/assets/images/AA-Logo-White.svg" class="sidebar-logo" alt="Logo">
+  <a href="javascript:void(0)" class="dropdown-toggle" onclick="toggleDropdown()">Linecards</a>
+  <div class="dropdown-menu">
+      <a class="dropdown-text" href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">August Agents</a>
+      <a href="/assets/Linecards/ESL Vision Line Card.pdf" target="_blank" class="dropdown-text">ESL Vision</a>
   </div>
-    <button id="lineCardBtn" class="menu-item">Linecards</button>
-  <a href="/about" class="menu-item-link">
-    <button class="menu-item">About</button>
-  </a>
-  <a href="/contact" class="menu-item-link">
-    <button class="menu-item">Contact</button>
-  </a>
+  <a href="/about" target="_blank">About</a>
+  <a href="/contact" target="_blank">Contact</a>
 </div>
 
+<div id="overlay"></div>
     <main>
       <h1>Contact</h1>
       <div class="grid-wrapper">

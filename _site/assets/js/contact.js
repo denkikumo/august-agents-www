@@ -1,30 +1,37 @@
 // Sidebar Menu //
 
-document.querySelector('.hamburger').addEventListener('click', function(event) {
-  const sidebar = document.querySelector('.sidebar');
-  const overlay = document.querySelector('.sidebar-overlay');
-  // Toggle sidebar visibility
-  if (sidebar.style.left === '0px') {
-      sidebar.style.left = '-280px';
-      overlay.style.display = 'none'; // Hide overlay
-  } else {
-      sidebar.style.left = '0px';
-      overlay.style.display = 'block'; // Show overlay
+function openNav() {
+    document.getElementById("mySidebar").style.transform = "translateX(280px)";
+    setTimeout(function() {
+        document.getElementById("overlay").style.display = "block";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.25)";
+    }, 100);
   }
-  event.stopPropagation();
-  });
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.transform = "translateX(-280px)";
+    document.getElementById("overlay").style.display = "none";
+    document.body.style.backgroundColor = "";
+  }
+  
+  function toggleDropdown() {
+    var dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.style.maxHeight = dropdownMenu.style.maxHeight ? null : dropdownMenu.scrollHeight + "px";
+  }
   
   document.addEventListener('click', function(event) {
-  const sidebar = document.querySelector('.sidebar');
-  const overlay = document.querySelector('.sidebar-overlay');
-  if (sidebar.style.left === '0px' && !event.target.closest('.sidebar') && !event.target.classList.contains('hamburger')) {
-      sidebar.style.left = '-280px';
-      overlay.style.display = 'none'; // Hide overlay
-  }
+    var sidebar = document.getElementById('mySidebar');
+    if (!sidebar.contains(event.target) && !document.getElementById('hamburger').contains(event.target)) {
+        closeNav();
+    }
   });
   
-  document.querySelector('.sidebar-overlay').addEventListener('click', function() {
-  // Close the sidebar when the overlay is clicked
-  document.querySelector('.sidebar').style.left = '-280px';
-  this.style.display = 'none'; // Hide overlay
+  document.getElementById('overlay').addEventListener('click', function(event) {
+    event.stopPropagation();
+    closeNav();
+  });
+  
+  
+  document.getElementById('mySidebar').addEventListener('click', function(event) {
+    event.stopPropagation();
   });

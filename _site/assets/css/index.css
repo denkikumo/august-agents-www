@@ -63,48 +63,74 @@ h2 {
   width: 11vw;
 }
 
-.hamburger {
-  color: #1F1F1F;
+#overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.25);
+  z-index: 2;
+  cursor: pointer;
+  }
+  
+  .sidebar {
+  height: 100vh;
+  width: 280px;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: -280px;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: transform 0.5s;
+  padding-top: 60px;
+  text-align: center;
+  }
+  
+  .sidebar-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 40px;
+  }
+  
+  .sidebar a, .sidebar .dropdown-toggle {
+  padding: 20px 15px;
+  text-decoration: none;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 22px;
+  color: #02475E;
   display: block;
+  }
+  
+  .sidebar .dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  }
+  
+  .sidebar .dropdown-menu a {
+  font-size: 18px;
+  color: #0088ff;
+  padding: 20px 15px;
+  }
+  
+  .sidebar .dropdown-menu a:active {
+  color: #333;
+  background-color: #f8f9fa;
+  }
+  
+  #hamburger {
+  color: #1F1F1F;
+  display: none;
   position: absolute;
   left: 22px;
   font-size: 36px;
   cursor: pointer;
   border: none;
   background-color: transparent;
-}
-
-.bar {
-  height: 3px;
-  width: 100%;
-  background-color: #333;
-}
-
-.sidebar {
-  position: fixed;
-  left: -280px; /* Ensure this matches the JavaScript toggle */
-  top: 0;
-  width: 280px;
-  height: 100vh;
-  background: #ffffff;
-  transition: left 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
-  z-index: 2;
-}
-
-.sidebar-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.25);
-  z-index: 2;
-}
+  }
 
 .modal-container {
   display: none;
@@ -144,6 +170,10 @@ nav li {
   display: inline-block;
 }
 
+.dropdown {
+    list-style-type: none;
+}
+
 .dropbtn {
   background-color: transparent;
   border: none;
@@ -161,7 +191,7 @@ nav li {
 }
 
 .dropdown-content a {
-  color: black;
+  color: #1F1F1F;
   padding: 16px 16px;
   text-decoration: none;
   display: block;
@@ -511,7 +541,7 @@ h1 {
   padding: 2vh 4vw;
 }
 
-.hamburger {
+#hamburger {
   display: block;
   font-size: 36px;
   cursor: pointer;
@@ -698,7 +728,7 @@ h1 {
   padding: 2vh 4vw;
 }
 
-.hamburger {
+#hamburger {
   display: block;
   font-size: 36px;
   cursor: pointer;
@@ -742,6 +772,7 @@ h1 {
 
 #lineCardBtn {
   display: block;
+  text-decoration: none;
 }
 
 .logo-hamburger-container {
@@ -780,5 +811,38 @@ h1 {
 @media (min-width: 1024px) and (max-width: 1127px) {
   h1 {
     font-size: 2.1em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dropdown-content {
+    margin-left: 70px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1F1F1F;
+  }
+
+  .dropbtn {
+    padding: 0;
+  }
+
+  .menu-item {
+    font-size: 24px;
   }
 }
