@@ -160,7 +160,7 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 24px;
   color: #1F1F1F;
@@ -234,7 +234,7 @@ nav li {
   font-size: 1.3em;
   color: #1F1F1F;
   cursor: pointer;
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   width: 100%;
   text-align: center;
@@ -266,6 +266,7 @@ nav li {
   text-decoration: none;
   color: #1F1F1F;
   padding: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav-links a.active {
@@ -303,6 +304,7 @@ nav li {
 }
 
 .cta-button, .cta-button:hover, .cta-button:active, .cta-button:focus {
+  font-family: "Montserrat", sans-serif;
   flex: 4;
   width: 50%;
   padding: 24px 36px;
@@ -443,6 +445,7 @@ nav li {
   display: flex;
   align-items: center;
   margin: 4vh 0 0 10vw;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer-location-container {
@@ -455,6 +458,7 @@ nav li {
   margin: 0;
   margin-left: 12px;
   max-width: fit-content;
+  font-family: "Montserrat", sans-serif;
 }
 
 .find-us-container {
@@ -468,10 +472,11 @@ nav li {
   justify-content: center;
   align-items: center;
   margin: 2vh 10vw;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contact-text {
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1em;
 }
 
@@ -491,7 +496,7 @@ nav li {
   display: flex;
   align-items: center;
   margin: 0 2vw;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1em;
 }
 
