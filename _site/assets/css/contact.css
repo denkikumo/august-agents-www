@@ -16,7 +16,7 @@ p {
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Roboto Slab', 'Serif';
   font-weight: 700;
   font-size: 3em;
   padding: 0 10vw;
@@ -24,7 +24,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto Slab', 'Serif';
   font-weight: 700;
   font-size: 2.5em;
   color: #1F1F1F;
@@ -341,7 +341,7 @@ nav li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2vh 10vw;
+  margin: 4vh 10vw;
   font-family: "Montserrat", sans-serif;
 }
 
