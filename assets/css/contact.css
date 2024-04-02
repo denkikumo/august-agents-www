@@ -316,6 +316,7 @@ nav li {
   display: flex;
   align-items: center;
   margin: 4vh 0 0 10vw;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer-location-container {
@@ -324,11 +325,16 @@ nav li {
   margin-right: 2vw;
 }
 
+.footer-location-container img {
+  height: 35px;
+}
+
 .location-text {
   margin: 0;
   margin-left: 12px;
   max-width: fit-content;
   font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
 }
 
 .find-us-container {
@@ -341,17 +347,18 @@ nav li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4vh 10vw;
+  margin: 6vh 10vw 2vh 10vw;
   font-family: "Montserrat", sans-serif;
 }
 
 .contact-text {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .contact-social {
   margin-left: 12px;
+  height: 35px;
 }
 
 .contact-social:hover {
@@ -367,7 +374,7 @@ nav li {
   align-items: center;
   margin: 0 2vw;
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .copyright-container {
