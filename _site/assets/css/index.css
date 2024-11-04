@@ -579,9 +579,23 @@ nav li {
   width: auto;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1268px) {
 .hamburger, .sidebar, .sidebar-overlay {
   display: none;
+}
+
+.bg-ss {
+  position: absolute;
+  top: 240px;                 /* Center vertically */
+  left: 50%;                /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset by 50% to achieve perfect centering */
+  width: 200px;             /* Full viewport width */
+  height: 200px;            /* Fixed height for the image */
+  background-image: url(/assets/images/State-imprint.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;   
 }
 
 
@@ -971,11 +985,11 @@ h1 {
 
   .bg-ss {
     position: absolute;
-    top: 310px;                 /* Center vertically */
+    top: 270px;                 /* Center vertically */
     left: 50%;                /* Center horizontally */
     transform: translate(-50%, -50%); /* Offset by 50% to achieve perfect centering */
     width: 200px;             /* Full viewport width */
-    height: 230px;            /* Fixed height for the image */
+    height: 210px;            /* Fixed height for the image */
     background-image: url(/assets/images/State-imprint.svg);
     background-size: contain;
     background-position: center;
