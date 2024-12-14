@@ -487,8 +487,42 @@ nav li {
 }
 
 .us-made img {
-  width: 19px;
+  width: 23px;
 }
+
+.imark-icon, .cali-icon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 6px;
+}
+
+.imark-icon img, .cali-icon img {
+  height: 19px;
+}
+
+.cali-icon img {
+  height: 34px;
+}
+
+.icon-tip {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 4vh;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.icon-tip1 {
+  justify-content: center;
+}
+.icon-tip img {
+  height: 32px;
+}
+.icon-tip1 p {
+  margin-bottom: 6px;
+}
+
 
 .card-p {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
