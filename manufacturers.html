@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>August Agents</title>
+  <meta name="description" content="Manufacturers Representative for California & Nevada" />
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/AA-Logo-White.svg" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Murecho:wght@100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="August Agents">
+  <meta property="og:image" content="https://augustagents.com/assets/images/AA-Logo-White.png">
+  <meta property="og:description" content="Manufacturers Representative for California & Nevada">
+</head>
+
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="header-stripe">
+      <img src="/assets/images/Header-Banner.svg" alt="Header Stripe">
+    </div>
+
+    <div class="header-container">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/images/AA-Logo-White.svg" alt="August Agents Logo">
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="/manufacturers">Manufacturers</a></li>
+          <li><a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">Full Linecard</a></li>
+
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger" onclick="openMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
+
+    <div id="mobileNav" class="mobile-nav">
+  <div class="mobile-nav-logo">
+    <img src="/assets/images/AA-Logo-White.svg" alt="August Agents Logo" />
+  </div>
+  <a href="/manufacturers">Manufacturers</a>
+  <a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">Full Linecard</a>
+  <a href="/contact">Contact</a>
+</div>
+
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <div class="site-content">
+    <div class="header-spacer"></div>
+    <main>
+
+<!-- 🔻 ACCORDION SECTION WRAPPER 🔻 -->
+<section class="section-heading-row sticky-sort">
+  <h2 class="sticky-heading-text" aria-live="polite">Manufacturers</h2>
+  <div class="dropdown sort-dropdown">
+    <button class="sort-toggle-btn" aria-haspopup="true" aria-expanded="false">
+      Sort <span class="sort-icon">☰</span>
+    </button>
+    <div class="sort-dropdown-menu">
+      <a class="filter-btn" href="/manufacturers?filter=all">All</a>
+      <a class="filter-btn" href="/manufacturers?filter=california">California</a>
+      <a class="filter-btn" href="/manufacturers?filter=nevada">Nevada</a>
+    </div>
+  </div>
+</section>
+
+<section class="accordion-wrapper">
+
+  <!-- 🔌 Electrical Lines -->
+  <details class="accordion" open id="electricalAccordion">
+  <summary class="accordion-header">Electrical Lines</summary>
+  <div class="card-grid-background" data-section-name="Electrical Lines">
+    <div class="card-grid-wrapper">
+      <div class="card-grid" id="electricalGrid"></div>
+    </div>
+  </div>
+</details>
+
+<details class="accordion" id="lightingAccordion">
+  <summary class="accordion-header">Lighting Lines</summary>
+  <div class="card-grid-background" data-section-name="Lighting Lines">
+    <div class="card-grid-wrapper">
+      <div class="card-grid" id="lightingGrid"></div>
+    </div>
+  </div>
+</details>
+
+</section>
+
+
+
+
+  <!-- JS: Card Generation -->
+  <script src="/assets/js/cards.js"></script>
+
+</main>
+
+  </div>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="footer-contact">
+      <div class="footer-location-container">
+        <img class="social-map" src="/assets/images/Map-Vector.svg" />
+        <p class="location-text">
+          <strong>Irvine, California</strong>
+        </p>
+      </div>
+      <div class="find-us-container">
+        <a href="https://www.linkedin.com/company/august-agents/" target="_blank">
+          <img src="/assets/images/LinkedIn.svg" alt="LinkedIn" class="contact-social">
+        </a>
+        <a href="https://www.instagram.com/augustagents/" target="_blank">
+          <img src="/assets/images/Instagram.svg" alt="Instagram" class="contact-social">
+        </a>
+        <a href="https://www.nemra.org/" target="_blank">
+          <img src="/assets/images/Nemra.png" alt="Nemra" class="contact-social" />
+        </a>
+      </div>
+    </div>
+    <div class="copyright-container">
+      <p class="copyright">© Copyright 2025 August Agents</p>
+    </div>
+  </footer>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script src="/assets/js/index.js"></script>
+  <script src="/assets/js/cards.js"></script>
+  <script>
+    function openMenu() {
+      document.getElementById('mobileNav').classList.add('show');
+      document.getElementById('menuOverlay').classList.add('show');
+    }
+
+    function closeMenu() {
+      document.getElementById('mobileNav').classList.remove('show');
+      document.getElementById('menuOverlay').classList.remove('show');
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      document.getElementById('electricalNav')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToSection('electricalGrid');
+      });
+
+      document.getElementById('lightingNav')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToSection('lightingGrid');
+      });
+
+      document.getElementById('mobileElectricalNav')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToSection('electricalGrid');
+      });
+
+      document.getElementById('mobileLightingNav')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        scrollToSection('lightingGrid');
+      });
+    });
+  </script>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-hint" onclick="scrollToTop()" title="Back to Top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+</body>
+
+</html>
