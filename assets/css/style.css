@@ -863,16 +863,21 @@ body {
 }
 
 
-}
+}@media (min-width: 1200px) and (max-width: 1300px) {
+  .intro-section {
+    flex-wrap: nowrap;
+    gap: 30px; /* reduce spacing if needed */
+    padding: 30px 20px;
+  }
 
-@media (min-width: 1200px) {
-  
-  .intro-text {
-  max-width: 500px;
-  margin-right: 50px;
-}
+  .intro-left,
+  .intro-right {
+    flex: 1 1 50%;
+    max-width: 50%;
+    margin: 0;
+  }
 
-.intro-text p{
-  max-width: 450px;
-}
+  .vertical-separator {
+    display: block;
+  }
 }
