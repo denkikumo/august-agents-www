@@ -496,7 +496,7 @@ body {
 /* Make track scroll smoother and loopable */
 .carousel-track {
   display: flex;
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 50s linear infinite;
 }
 
 .mobile-nav {
