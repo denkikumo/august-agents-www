@@ -26,7 +26,7 @@ const cardData = [
     logo: 'assets/images/patriotindustries.png',
     alt: 'Patriot Industries',
     website: 'https://patriotsas.com/',
-    catalog: '/assets/Catalogs/Patriot Industries Catalog - 2024.pdf',
+    catalog: '/assets/Catalogs/PatriotIndustriesCatalog-2024.pdf',
     description: 'Rigid Aluminum, Rigid Stainless Steel, GRC Elbows, Nipples, Couplings, EMT Elbows',
     territory: 'CA, NV',
     freight: 'ADD',
