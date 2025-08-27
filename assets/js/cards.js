@@ -4,7 +4,10 @@ const cardData = [
     logo: 'assets/images/Elite-Components.png',
     alt: 'Elite Components',
     website: 'https://elitecomponents.com/',
-    catalog: 'https://elitecomponents.com/wp-content/uploads/Elite-Electrical-Fasteners-Quick-Reference-Guide.pdf',
+    catalogs: [
+      { label: "Quick Reference", url: "/assets/Linecards/Elite-Electrical-Fasteners-Quick-Reference-Guide_062025.pdf" },
+      { label: "Main Catalog", url: "/assets/Linecards/Elite Components Catalog.pdf" }
+    ],
     description: 'Electrical Fasteners, Plastic Boxes, Strut Accessories, Local Strut & All Thread Inventory',
     territory: 'CA, NV',
     freight: '$500',
@@ -15,7 +18,9 @@ const cardData = [
     logo: 'assets/images/Peco-Logo.png',
     alt: 'Peco Electric',
     website: 'https://peco-electric.com/',
-    catalog: 'https://peco-electric.com/wp-content/uploads/2023/11/PECO-Catalog-2023.pdf',
+    catalogs: [
+      { label: "Full Line Card", url: "/assets/Linecards/PECO Catalog.pdf" }
+    ],
     description: 'Electrical Conduit Fittings & Accessories',
     territory: 'CA, NV',
     freight: '$1500',
@@ -26,7 +31,9 @@ const cardData = [
     logo: 'assets/images/patriotindustries.png',
     alt: 'Patriot Industries',
     website: 'https://patriotsas.com/',
-    catalog: '/assets/Catalogs/PatriotIndustriesCatalog-2024.pdf',
+    catalogs: [
+      { label: "Full Line Card", url: "/assets/Linecards/Patriot.pdf" }
+    ],
     description: 'Rigid Aluminum, Rigid Stainless Steel, GRC Elbows, Nipples, Couplings, EMT Elbows',
     territory: 'CA, NV',
     freight: 'ADD',
@@ -37,7 +44,9 @@ const cardData = [
     logo: 'assets/images/EZW-Conduit-Alva_color-1.png',
     alt: 'EZ pvc Weld',
     website: 'https://alva-mfg.com/',
-    catalog: 'https://online.flippingbook.com/view/40133734/',
+    catalogs: [
+      { label: "Full Line Card", url: "/assets/Linecards/E-Z-Weld-Conduit-by-Alva-Mfg.pdf" }
+    ],
     description: 'PVC Conduit, Elbows, Solvents, and Cements',
     territory: 'CA, NV',
     freight: 'ADD',
@@ -48,7 +57,12 @@ const cardData = [
     logo: 'assets/images/Titan-3-Technology.png',
     alt: 'Titan 3 Technology',
     website: 'https://www.titan3.com/',
-    catalog: '/titan-catalogs',
+    catalogs: [
+      { label: "Ceiling Fan Catalog", url: "/assets/Linecards/Titan-Catalogs/Titan Ceiling Fan Catalog.pdf" },
+      { label: "Weatherproof Catalog", url: "/assets/Linecards/Titan-Catalogs/Titan Weatherproof Catalog.pdf" },
+      { label: "TWCW1PC", url: "/assets/Linecards/Titan-Catalogs/TWCW1PC.pdf" },
+      { label: "TWCW2PC", url: "/assets/Linecards/Titan-Catalogs/TWCW2PC.pdf" }
+    ],
     description: 'In-Use, Metallic/Non-Metallic Weatherproof Boxes, Wire Nuts',
     territory: 'CA, NV',
     freight: '$2000',
@@ -59,7 +73,13 @@ const cardData = [
     logo: 'assets/images/Mulberry.png',
     alt: 'Mulberry Metals',
     website: 'https://mulberrymetal.com/',
-    catalog: '/mulberry-catalogs',
+    catalogs: [
+      { label: "Main Catalog", url: "/assets/Linecards/Mulberry-Catalogs/Mulberry Catalog.pdf" },
+      { label: "Companion Series Brochure 2024", url: "/assets/Linecards/Mulberry-Catalogs/Mulberry Companion Series Brochure-2024.pdf" },
+      { label: "LED Flood Lights", url: "/assets/Linecards/Mulberry-Catalogs/Mulberry LED Flood Lights.pdf" },
+      { label: "Cat No 30030-W-Z Series", url: "/assets/Linecards/Mulberry-Catalogs/Cat No 30030-W-Z Series.pdf" },
+      { label: "Cat No 30040-W-Z Series", url: "/assets/Linecards/Mulberry-Catalogs/Cat No 30040-W-Z Series.pdf" },
+    ],
     description: 'Wall Plates, Weatherproof Boxes, Steel Box Covers, Conduit Bodies',
     territory: 'CA',
     freight: '$1000',
@@ -70,7 +90,9 @@ const cardData = [
     logo: 'assets/images/kps-logo.png',
     alt: 'kps measuring instruments',
     website: 'https://kps-intl.com/',
-    catalog: '',
+    catalogs: [
+      { label: "Full Line Card", url: "/assets/Linecards/KPS 2024 Test and Measurement Catalog.pdf" }
+    ],
     description: 'Metering, Testing, & Measurement',
     territory: 'CA',
     freight: '$500',
@@ -81,7 +103,9 @@ const cardData = [
     logo: 'assets/images/Wiha.png',
     alt: 'Wiha Tools',
     website: 'https://www.wihatools.com/',
-    catalog: '/wiha-catalogs',
+    catalogs: [
+      { label: "Top Sellers Wiha", url: "https://cdn.shopify.com/s/files/1/0608/2117/6576/files/91327.TopsellerCatalog.2024.pdf?v=1709228560" }
+    ],
     description: 'Electrical Trade Tools, Insulated & Precision Tools, German Made',
     territory: 'CA, NV',
     freight: '$750',
@@ -92,7 +116,10 @@ const cardData = [
     logo: 'assets/images/Spike.png',
     alt: 'Spike Electric Controls',
     website: 'https://spikeelectric.com/',
-    catalog: '/spike-catalogs',
+    catalogs: [
+      { label: "Line Card", url: "/assets/Linecards/Spike-Catalogs/Spike Electric Line Card.pdf" },
+      { label: "Switchgear Solutions", url: "/assets/Linecards/Spike-Catalogs/Spike Switchgear Solutions.pdf" },
+    ],
     description: 'Expedited Gear OEM, Panels, Switchboards, MCC Buckets',
     territory: 'CA, NV',
     freight: 'ADD',
@@ -114,7 +141,13 @@ const cardData = [
     logo: 'assets/images/Plymouth.png',
     alt: 'Plymouth',
     website: 'https://www.plymouthrubber.com/',
-    catalog: '/plymouth-catalogs',
+    catalogs: [
+      { label: "Primary", url: "/assets/Linecards/Plymouth-Catalogs/Plymouth PRIMARY.pdf" },
+      { label: "PLYJACK Product Overview", url: "/assets/Linecards/Plymouth-Catalogs/PLYJACK Product Overview.pdf" },
+      { label: "Mining Catalog", url: "/assets/Linecards/Plymouth-Catalogs/Mining Catalog.pdf" },
+      { label: "Plymouth Product Guide", url: "/assets/Linecards/Plymouth-Catalogs/Plymouth Product Guide.pdf" },
+      { label: "UTILITY Product Guide", url: "/assets/Linecards/Plymouth-Catalogs/UTILITY Product Guide.pdf" },
+    ],
     description: 'C & I Electrical Tapes, Vinyl, Mastics, Rubber Tape',
     territory: 'CA, NV',
     freight: '$2500',
@@ -125,7 +158,9 @@ const cardData = [
     logo: 'assets/images/Aida_logo.png',
     alt: 'Aida Corp',
     website: 'https://aidacorp.com/',
-    catalog: 'https://aidacorp.com/wp-content/uploads/2023/04/2023-AIDA-CATALOG_DIGITAL4REPS.pdf',
+    catalogs: [
+      { label: "Full Line Card", url: "/assets/Linecards/2025 Aida Catalog.pdf" }
+    ],
     description: 'Wiring devices, plug & receptacles, lighting controls',
     territory: 'CA, NV',
     freight: '$1500',
@@ -136,7 +171,11 @@ const cardData = [
     logo: 'assets/images/Delta-Therm.png',
     alt: 'Delta Therm',
     website: 'https://www.delta-therm.com/en-us/default.aspx',
-    catalog: '/assets/Catalogs/Delta Therm Catalog.pdf',
+    catalogs: [
+      { label: "Delta Therm Catalog", url: "/assets/Linecards/DeltaTherm-Catalogs/Delta Therm Catalog.pdf" },
+      { label: "EX-IT-LA Data-Sheet", url: "/assets/Linecards/DeltaTherm-Catalogs/EX-IT-LA Data-Sheet.pdf" },
+      { label: "EX-IT-LA", url: "/assets/Linecards/DeltaTherm-Catalogs/EX-IT-LA.pdf" }
+    ],
     description: 'Engineered Heat Trace Solutions',
     territory: 'CA, NV',
     freight: '$4500',
@@ -147,7 +186,9 @@ const cardData = [
     logo: 'assets/images/Ouellet.png',
     alt: 'Ouellet',
     website: 'https://www.ouellet.com/en-us/default.aspx',
-    catalog: 'https://www.ouellet.com/CMSLibraries/Catalogues/us_products_catalog/CATUS.pdf',
+    catalogs: [
+      { label: "Full Line Card", url: "/assets/Linecards/Ouellet Catalog.pdf" }
+    ],
     description: 'In-Floor Heat, Wall Heaters, Patio Heaters',
     territory: 'CA',
     freight: '$2000',
@@ -158,7 +199,9 @@ const cardData = [
     logo: 'assets/images/ESA-Fabrication.png',
     alt: 'ESA Fabrication',
     website: 'https://esafab.com/',
-    catalog: 'https://esafab.com/wp-content/uploads/2024/08/2024-ESA-Catalog.pdf',
+    catalogs: [
+      { label: "Full Line Card", url: "https://esafab.com/wp-content/uploads/2023/09/ESA-Catalog-FINAL.pdf" }
+    ],
     description: 'Material Handling, Carts, A Frames, Spool Handling',
     territory: 'CA',
     freight: 'ADD',
@@ -195,7 +238,10 @@ const lightingCards = [
     logo: 'assets/images/XtraLight.svg',
     alt: 'Xtra Light',
     website: 'https://www.xtralight.com/',
-    catalog: '',
+    catalogs: [
+      { label: "OBL Spacing Recommendations", url: "/assets/Linecards/XtraLight-Catalogs/OBL spacing recommendations.pdf" },
+      { label: "Optibay_final_7.16.2025", url: "/assets/Linecards/XtraLight-Catalogs/Optibay_final_7.16.2025.pdf" },
+    ],
     description: 'Commercial Indoor & Outdoor Fixtures',
     territory: 'CA, NV',
     freight: '$2500',
@@ -217,7 +263,9 @@ const lightingCards = [
     logo: 'assets/images/Eco-Revolution.png',
     alt: 'Eco Revolution Lighting',
     website: 'https://eco-revolution.com/',
-    catalog: '',
+    catalogs: [
+      { label: "Full Line Card", url: "/assets/Linecards/Pickleball-EC-2024.pdf" }
+    ],
     description: 'Architectural Outdoor, Industrial & Local Pole Inventory',
     territory: 'CA, NV',
     freight: '$5000',
@@ -228,7 +276,14 @@ const lightingCards = [
     logo: 'assets/images/ESL-Vision.png',
     alt: 'ESL Vision',
     website: 'https://eslvision.com/',
-    catalog: '/assets/Catalogs/ESL Vision Catalog 2024.pdf',
+    catalogs: [
+      { label: "ESL-AL-75150W-13050", url: "/assets/Linecards/ESL-Catalogs/ESL Vision, ESL-AL-75150W-13050.pdf" },
+      { label: "ESL-PT-4580W-13050-BZ.pdf", url: "/assets/Linecards/ESL-Catalogs/ESL Vision, ESL-PT-4580W-13050-BZ.pdf" },
+      { label: "ESL-PT-100160W-13050-BZ.pdf", url: "/assets/Linecards/ESL-Catalogs/ESL Vision, ESL-PT-100160W-13050-BZ.pdf" },
+      { label: "ESL-WP-30100W-53050.pdf", url: "/assets/Linecards/ESL-Catalogs/ESL Vision, ESL-WP-30100W-53050.pdf" },
+      { label: "ESL-OPT-6-0919W-23050K", url: "/assets/Linecards/ESL-Catalogs/ESL-Vision-ESL-OPT-6-0919W-23050K.pdf" },
+      { label: "ESL-OPT-8-1129W-23050K.pdf", url: "/assets/Linecards/ESL-Catalogs/ESL-Vision-ESL-OPT-8-1129W-23050K.pdf" }
+    ],
     description: 'LED Fixtures & Retrofits, Lamps, Drivers, Emergency',
     territory: 'CA',
     freight: '$500',
@@ -250,7 +305,9 @@ const lightingCards = [
     logo: 'assets/images/lotus-led-lights.svg',
     alt: 'Lotus LED Lights',
     website: 'https://www.lotusledlights.com/',
-    catalog: 'https://www.lotusledlights.com/resources/Lotus-Catalog-2025_Web.pdf',
+    catalogs: [
+      { label: "Full Line Card", url: "/assets/Linecards/Lotus 2025 Catalog.pdf" }
+    ],
     description: 'Specialty Recessed Lighting, Undercabinet, Tape, Fire Rated',
     territory: 'CA',
     freight: '$1000',
@@ -261,7 +318,7 @@ const lightingCards = [
     logo: 'assets/images/asd-logo.png',
     alt: 'ASD Lighting',
     website: 'https://asd-lighting.com/',
-    catalog: 'https://asd-lighting.com/upload/catalog/asd-catalog-web-2025-2.pdf',
+    catalogs: '',
     description: 'Commercial and Residential Lighting',
     territory: 'CA',
     freight: 'Inquire',
@@ -316,14 +373,28 @@ const renderCards = (dataArray, targetGrid, filterState) => {
 
         <div class="card-btn-links">
           <a href="${data.website}" target="_blank" class="card-btn-link">Website</a>
-          ${data.catalog ? `<a href="${data.catalog}" target="_blank" class="card-btn-link">Catalog</a>` : ''}
+          <!-- Catalog button injected below -->
         </div>
       </div>
     `;
 
+    // Find button row
+    const btnRow = card.querySelector('.card-btn-links');
+
+    // Handle catalogs (array)
+    if (data.catalogs && data.catalogs.length > 0) {
+      const catalogBtn = document.createElement('a');
+      catalogBtn.href = '#';
+      catalogBtn.className = 'card-btn-link';
+      catalogBtn.textContent = 'Catalog';
+      catalogBtn.onclick = () => handleCatalogClick(data.catalogs);
+      btnRow.appendChild(catalogBtn);
+    }
+
     targetGrid.appendChild(card);
   });
 };
+
 
 // ======= READ URL PARAMS FOR FILTER STATE =======
 const params = new URLSearchParams(window.location.search);
