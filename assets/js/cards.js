@@ -326,22 +326,75 @@ const lightingCards = [
   }
 ];
 
-
-
-
 // ======= SELECT TARGET CONTAINERS =======
 const electricalGrid = document.getElementById('electricalGrid');
 const lightingGrid = document.getElementById('lightingGrid');
 
-// ======= CARD RENDER FUNCTION =======
+/* ======= CATALOG MODAL HELPERS (build on the fly) ======= */
+function openCatalogModal(links) {
+  if (!Array.isArray(links) || links.length === 0) return;
+
+  let modal = document.getElementById('catalogModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'catalogModal';
+    modal.className = 'catalog-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-labelledby', 'catalogModalTitle');
+    modal.innerHTML = `
+      <div class="catalog-modal__backdrop" data-close-catalog></div>
+      <div class="catalog-modal__dialog" role="document">
+        <button class="catalog-modal__close" type="button" aria-label="Close" data-close-catalog>×</button>
+        <h3 id="catalogModalTitle" class="catalog-modal__title">Select a Catalog</h3>
+        <div id="catalogLinks" class="catalog-modal__links"></div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // close handlers
+    modal.addEventListener('click', (e) => {
+      if (e.target.matches('[data-close-catalog]')) closeCatalogModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeCatalogModal();
+    });
+  }
+
+  const list = modal.querySelector('#catalogLinks');
+  list.innerHTML = '';
+
+  links.forEach(({ label, url }) => {
+    const a = document.createElement('a');
+    a.className = 'catalog-modal__link';
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = label || (url ? url.split('/').pop() : 'Catalog');
+    list.appendChild(a);
+  });
+
+  modal.classList.add('show');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeCatalogModal() {
+  const modal = document.getElementById('catalogModal');
+  if (modal) {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+}
+
+/* ======= CARD RENDER FUNCTION ======= */
 const renderCards = (dataArray, targetGrid, filterState) => {
   targetGrid.innerHTML = '';
-  const normalized = filterState.toLowerCase();
+  const normalized = (filterState || 'all').toLowerCase();
 
   const filtered = normalized === 'all'
     ? dataArray
     : dataArray.filter(card =>
-        card.territory.toLowerCase().includes(normalized)
+        (card.territory || '').toLowerCase().includes(normalized)
       );
 
   filtered.forEach(data => {
@@ -350,29 +403,29 @@ const renderCards = (dataArray, targetGrid, filterState) => {
 
     card.innerHTML = `
       <div class="manufacturer-logo-container">
-        <a href="${data.website}" target="_blank">
+        <a href="${data.website}" target="_blank" rel="noopener">
           <img src="${data.logo}" alt="${data.alt}" class="manufacturer-logo" />
         </a>
       </div>
       <div class="manufacturer-info-container">
-        <p class="manufacturer-products">${data.description}</p>
+        <p class="manufacturer-products">${data.description || ''}</p>
 
         <div class="spacer-line"></div>
 
         <div class="territory-freight-row">
-          <p class="manufacturer-products-sub"><strong>Territory:</strong> ${data.territory}</p>
-          <p class="manufacturer-products-sub"><strong>Freight:</strong> ${data.freight}</p>
+          <p class="manufacturer-products-sub"><strong>Territory:</strong> ${data.territory || ''}</p>
+          <p class="manufacturer-products-sub"><strong>Freight:</strong> ${data.freight || ''}</p>
         </div>
 
         <div class="freight-icon-row">
-          ${data.icons.includes('us-made') ? '<div class="icon-group"><img src="assets/images/us-made.png" /><span>US Made</span></div>' : ''}
-          ${data.icons.includes('cali-icon') ? '<div class="icon-group"><img src="assets/images/cali-icon.png" /><span>Local Stock</span></div>' : ''}
+          ${data.icons && data.icons.includes('us-made') ? '<div class="icon-group"><img src="assets/images/us-made.png" /><span>US Made</span></div>' : ''}
+          ${data.icons && data.icons.includes('cali-icon') ? '<div class="icon-group"><img src="assets/images/cali-icon.png" /><span>Local Stock</span></div>' : ''}
         </div>
 
         <div class="flex-spacer"></div>
 
         <div class="card-btn-links">
-          <a href="${data.website}" target="_blank" class="card-btn-link">Website</a>
+          <a href="${data.website}" target="_blank" rel="noopener" class="card-btn-link">Website</a>
           <!-- Catalog button injected below -->
         </div>
       </div>
@@ -381,20 +434,43 @@ const renderCards = (dataArray, targetGrid, filterState) => {
     // Find button row
     const btnRow = card.querySelector('.card-btn-links');
 
-    // Handle catalogs (array)
-    if (data.catalogs && data.catalogs.length > 0) {
+    // Handle catalogs (preferred: data.catalogs = [{label, url}, ...])
+    if (Array.isArray(data.catalogs) && data.catalogs.length > 0) {
       const catalogBtn = document.createElement('a');
-      catalogBtn.href = '#';
       catalogBtn.className = 'card-btn-link';
       catalogBtn.textContent = 'Catalog';
-      catalogBtn.onclick = () => handleCatalogClick(data.catalogs);
+
+      if (data.catalogs.length === 1) {
+        // Single catalog → real link (no '#')
+        const u = data.catalogs[0]?.url || '#';
+        catalogBtn.href = u;
+        catalogBtn.target = '_blank';
+        catalogBtn.rel = 'noopener';
+      } else {
+        // Multiple → open modal list
+        catalogBtn.href = '#';
+        catalogBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          openCatalogModal(data.catalogs);
+        });
+      }
+
+      btnRow.appendChild(catalogBtn);
+    }
+    // Back-compat: old schema data.catalog (single string URL)
+    else if (data.catalog) {
+      const catalogBtn = document.createElement('a');
+      catalogBtn.href = data.catalog;
+      catalogBtn.target = '_blank';
+      catalogBtn.rel = 'noopener';
+      catalogBtn.className = 'card-btn-link';
+      catalogBtn.textContent = 'Catalog';
       btnRow.appendChild(catalogBtn);
     }
 
     targetGrid.appendChild(card);
   });
 };
-
 
 // ======= READ URL PARAMS FOR FILTER STATE =======
 const params = new URLSearchParams(window.location.search);
@@ -420,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Close dropdown on outside click
   document.addEventListener('click', (e) => {
-    if (!sortDropdown.contains(e.target) && !sortToggleBtn.contains(e.target)) {
+    if (sortDropdown && !sortDropdown.contains(e.target) && !sortToggleBtn.contains(e.target)) {
       sortDropdown.classList.remove('open');
     }
   });
@@ -439,12 +515,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateStickyHeading = () => {
     const scrollY = window.scrollY;
     const buffer = 120; // adjust as needed
-    const lightingTop = lighting.offsetTop;
-    const electricalTop = electrical.offsetTop;
+    const lightingTop = lighting?.offsetTop ?? Number.POSITIVE_INFINITY;
+    const electricalTop = electrical?.offsetTop ?? Number.POSITIVE_INFINITY;
 
-    if (scrollY + buffer >= lightingTop && lighting.open) {
+    if (scrollY + buffer >= lightingTop && lighting && lighting.open) {
       stickyHeading.textContent = 'Lighting Lines';
-    } else if (scrollY + buffer >= electricalTop && electrical.open) {
+    } else if (scrollY + buffer >= electricalTop && electrical && electrical.open) {
       stickyHeading.textContent = 'Electrical Lines';
     } else {
       stickyHeading.textContent = 'Manufacturers';

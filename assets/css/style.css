@@ -634,6 +634,46 @@ body {
 }
 
 
+/* ===== Catalog Modal ===== */
+.catalog-modal { 
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 10000;
+}
+.catalog-modal.show { display: flex; }
+.catalog-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.catalog-modal__dialog {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  width: calc(100% - 40px);
+  padding: 22px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.25);
+  font-family: inherit;
+  margin: auto;
+}
+.catalog-modal__title { margin: 0 0 12px 0; font-size: 1.25rem; }
+.catalog-modal__links { display: grid; gap: 10px; margin-top: 10px; }
+.catalog-modal__link {
+  display: flex; align-items: center; justify-content: space-between;
+  text-decoration: none; padding: 12px 14px; border: 1px solid #e3e3e3; border-radius: 6px;
+  color: #222;
+}
+.catalog-modal__link:hover { background: #f7f7f7; border-color: #d6d6d6; }
+.catalog-modal__close {
+  position: absolute; top: 10px; right: 12px;
+  background: none; border: 0; font-size: 22px; cursor: pointer; line-height: 1;
+}
+@media (max-width: 480px) {
+  .catalog-modal__dialog { margin: 6vh auto; padding: 18px; }
+}
 
 
 
