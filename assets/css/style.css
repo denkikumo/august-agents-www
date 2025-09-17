@@ -495,9 +495,11 @@ body {
 
 /* Make track scroll smoother and loopable */
 .carousel-track {
-  display: flex;
-  animation: scrollLeft 50s linear infinite;
+  display: flex;           /* optional, if you like the spacing */
+  width: max-content;       /* ensure track width fits content */
+  animation: scrollLeft 200s linear infinite;  /* see note below */
 }
+
 
 .mobile-nav {
   display: flex;
@@ -679,9 +681,10 @@ body {
 
 
 @keyframes scrollLeft {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* move the full track width (all 18 images) */
+}
+
 
 
 @media (max-width: 1199px) {
