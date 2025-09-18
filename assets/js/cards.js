@@ -41,7 +41,7 @@ const cardData = [
   },
   {
     category: 'Electrical',
-    logo: 'assets/images/EZW-Conduit-Alva_color-1.png',
+    logo: 'assets/images/Alva-manufacturing.jpg',
     alt: 'EZ pvc Weld',
     website: 'https://alva-mfg.com/',
     catalogs: [
