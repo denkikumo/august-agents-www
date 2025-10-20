@@ -497,7 +497,13 @@ body {
 .carousel-track {
   display: flex;           /* optional, if you like the spacing */
   width: max-content;       /* ensure track width fits content */
-  animation: scrollLeft 200s linear infinite;  /* see note below */
+  animation: scrolling 10s linear infinite;  /* see note below */
+}
+
+
+@keyframes scrolling {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move the full track width (all 18 images) */
 }
 
 
@@ -680,10 +686,6 @@ body {
 
 
 
-@keyframes scrollLeft {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* move the full track width (all 18 images) */
-}
 
 
 
