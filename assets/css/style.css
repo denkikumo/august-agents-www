@@ -497,7 +497,7 @@ body {
 .carousel-track {
   display: flex;           /* optional, if you like the spacing */
   width: max-content;       /* ensure track width fits content */
-  animation: scrolling 10s linear infinite;  /* see note below */
+  animation: scrolling 150s linear infinite;  /* see note below */
 }
 
 
