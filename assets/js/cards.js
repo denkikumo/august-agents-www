@@ -420,6 +420,7 @@ const renderCards = (dataArray, targetGrid, filterState) => {
         <div class="freight-icon-row">
           ${data.icons && data.icons.includes('us-made') ? '<div class="icon-group"><img src="assets/images/us-made.png" /><span>US Made</span></div>' : ''}
           ${data.icons && data.icons.includes('cali-icon') ? '<div class="icon-group"><img src="assets/images/cali-icon.png" /><span>Local Stock</span></div>' : ''}
+          ${data.icons && data.icons.includes('imark-icon') ? '<div class="icon-group"><img src="assets/images/ad-small-white.png" /><span></span></div>' : ''}
         </div>
 
         <div class="flex-spacer"></div>
