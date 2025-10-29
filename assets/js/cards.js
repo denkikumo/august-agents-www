@@ -282,7 +282,8 @@ const lightingCards = [
       { label: "ESL-PT-100160W-13050-BZ.pdf", url: "/assets/Linecards/ESL-Catalogs/ESL Vision, ESL-PT-100160W-13050-BZ.pdf" },
       { label: "ESL-WP-30100W-53050.pdf", url: "/assets/Linecards/ESL-Catalogs/ESL Vision, ESL-WP-30100W-53050.pdf" },
       { label: "ESL-OPT-6-0919W-23050K", url: "/assets/Linecards/ESL-Catalogs/ESL-Vision-ESL-OPT-6-0919W-23050K.pdf" },
-      { label: "ESL-OPT-8-1129W-23050K.pdf", url: "/assets/Linecards/ESL-Catalogs/ESL-Vision-ESL-OPT-8-1129W-23050K.pdf" }
+      { label: "ESL-OPT-8-1129W-23050K.pdf", url: "/assets/Linecards/ESL-Catalogs/ESL-Vision-ESL-OPT-8-1129W-23050K.pdf" },
+      { label: "ESL-2025-Catalog.pdf", url: "/assets/Linecards/ESL-Catalogs/ESLCatalog2025.pdf" },
     ],
     description: 'LED Fixtures & Retrofits, Lamps, Drivers, Emergency',
     territory: 'CA',
