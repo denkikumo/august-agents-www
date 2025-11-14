@@ -481,7 +481,14 @@ body {
   overflow: hidden;
 }
 
-.carousel-track img {
+.hero-carousel-2 {
+  max-width: 100%;
+  margin: 0px auto 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.carousel-track img, .carousel-track-2 img {
   flex: 0 0 auto;
   width: auto;
   height: 320px;
@@ -499,6 +506,12 @@ body {
   width: max-content;       /* ensure track width fits content */
   animation: scrolling 150s linear infinite;  /* see note below */
 }
+
+ .carousel-track-2 {
+  display: flex;           /* optional, if you like the spacing */
+  width: max-content;       /* ensure track width fits content */
+  animation: scrolling 150s linear infinite reverse;
+ }
 
 
 @keyframes scrolling {
