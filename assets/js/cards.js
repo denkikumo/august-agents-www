@@ -36,20 +36,20 @@ const cardData = [
     ],
     description: 'Rigid Aluminum, Rigid Stainless Steel, GRC Elbows, Nipples, Couplings, EMT Elbows',
     territory: 'CA, NV',
-    freight: 'ADD',
+    freight: 'Inquire',
     icons: ['us-made']
   },
   {
     category: 'Electrical',
     logo: 'assets/images/Alva-manufacturing.jpg',
-    alt: 'EZ pvc Weld',
+    alt: 'Alva',
     website: 'https://alva-mfg.com/',
     catalogs: [
       { label: "Full Line Card", url: "/assets/Linecards/E-Z-Weld-Conduit-by-Alva-Mfg.pdf" }
     ],
     description: 'PVC Conduit, Elbows, Solvents, and Cements',
     territory: 'CA, NV',
-    freight: 'ADD',
+    freight: 'Inquire',
     icons: []
   },
   {
@@ -269,7 +269,7 @@ const lightingCards = [
     description: 'Architectural Outdoor, Industrial & Local Pole Inventory',
     territory: 'CA, NV',
     freight: '$5000',
-    icons: ['cali-icon', 'us-made']
+    icons: ['us-made']
   },
   {
     category: 'Lighting',
@@ -287,7 +287,7 @@ const lightingCards = [
     ],
     description: 'LED Fixtures & Retrofits, Lamps, Drivers, Emergency',
     territory: 'CA',
-    freight: '$500',
+    freight: '$500 Standard /$2500 for 8’ product',
     icons: []
   },
   {
@@ -299,7 +299,7 @@ const lightingCards = [
     description: 'Indoor/Outdoor Luminaires, lamps, Specialty lighting',
     territory: 'CA',
     freight: '$1500',
-    icons: ['cali-icon']
+    icons: []
   },
   {
     category: 'Lighting',
