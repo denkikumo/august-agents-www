@@ -230,7 +230,7 @@ const lightingCards = [
     catalog: '',
     description: 'Industrial and Hazardous Location Lighting',
     territory: 'CA, NV',
-    freight: '$2000',
+    freight: '$5000',
     icons: ['us-made']
   },
   {
