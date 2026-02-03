@@ -236,6 +236,10 @@ body {
   height: 32px;
 }
 
+.contact-grid {
+  text-align: center;
+}
+
 .copyright-container {
   text-align: center;
   padding: 10px 0;
