@@ -6,13 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>August Agents</title>
-  <meta name="description" content="Manufacturers Representative for California & Nevada" />
+  <title>Manufacturers | August Agents Electrical Manufacturers Representative</title>
+  <meta name="description" content="View the manufacturers represented by August Agents across California and Nevada, including electrical lines, lighting lines, catalogs, territories, freight details, and product information." />
+  <link rel="canonical" href="https://augustagents.com/manufacturers" />
 
-  <link rel="icon" type="image/svg+xml" href="/assets/images/AA-Logo-White.svg" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <link rel="stylesheet" href="/assets/css/style.css" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -22,10 +27,39 @@
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Murecho:wght@100..900&display=swap"
     rel="stylesheet">
 
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="August Agents">
-  <meta property="og:image" content="https://augustagents.com/assets/images/AA-Logo-White.png">
-  <meta property="og:description" content="Manufacturers Representative for California & Nevada">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://augustagents.com/manufacturers">
+  <meta property="og:title" content="Manufacturers | August Agents">
+  <meta property="og:description" content="Explore August Agents manufacturers represented across California and Nevada, including electrical and lighting lines, catalogs, territories, and product information.">
+  <meta property="og:image" content="https://augustagents.com/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Manufacturers | August Agents">
+  <meta name="twitter:description" content="View August Agents manufacturers represented across California and Nevada.">
+  <meta name="twitter:image" content="https://augustagents.com/assets/images/og-image.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "August Agents Manufacturers",
+    "url": "https://augustagents.com/manufacturers",
+    "description": "Manufacturers represented by August Agents across California and Nevada.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "August Agents",
+      "url": "https://augustagents.com"
+    },
+    "about": {
+      "@type": "Organization",
+      "name": "August Agents",
+      "url": "https://augustagents.com",
+      "logo": "https://augustagents.com/assets/images/AA-Logo-White.png"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -37,9 +71,14 @@
     </div>
 
     <div class="header-container">
+      <button class="mobile-menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="logo">
         <a href="/">
-          <img src="/assets/images/AA-Logo-White.svg" alt="August Agents Logo">
+          <img src="/assets/images/AA-Logo-White.svg" alt="August Agents electrical manufacturers representative logo">
         </a>
       </div>
 
@@ -52,153 +91,52 @@
         </ul>
       </nav>
 
-      <div class="hamburger" onclick="openMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </div>
-
-    <div id="menuOverlay" class="menu-overlay" onclick="closeMenu()"></div>
-
-    <div id="mobileNav" class="mobile-nav">
-  <div class="mobile-nav-logo">
-    <img src="/assets/images/AA-Logo-White.svg" alt="August Agents Logo" />
-  </div>
-  <a href="/manufacturers">Manufacturers</a>
-  <a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">Full Linecard</a>
-  <a href="/contact">Contact</a>
-</div>
 
   </header>
+  <div class="mobile-menu-overlay"></div>
 
-  <!-- ====== MAIN CONTENT ====== -->
-  <div class="site-content">
+<nav class="mobile-slide-menu">
+  <button class="mobile-menu-close" aria-label="Close menu">×</button>
+
+  <div class="mobile-menu-logo">
+    <img src="/assets/images/AA-Logo-White.svg" alt="August Agents Logo">
+  </div>
+
+  <a href="/manufacturers">Manufacturers</a>
+  <a href="/contact">Contact</a>
+</nav>
+
     <div class="header-spacer"></div>
-    <main>
-
-<!-- 🔻 ACCORDION SECTION WRAPPER 🔻 -->
-<section class="section-heading-row sticky-sort">
-  <h2 class="sticky-heading-text" aria-live="polite">Manufacturers</h2>
-  <div class="dropdown sort-dropdown">
-    <button class="sort-toggle-btn" aria-haspopup="true" aria-expanded="false">
-      Sort <span class="sort-icon">☰</span>
-    </button>
-    <div class="sort-dropdown-menu">
-      <a class="filter-btn" href="/manufacturers?filter=all">All</a>
-      <a class="filter-btn" href="/manufacturers?filter=CA">California</a>
-      <a class="filter-btn" href="/manufacturers?filter=NV">Nevada</a>
-    </div>
-  </div>
-</section>
-
-<section class="accordion-wrapper">
-
-  <!-- 🔌 Electrical Lines -->
-  <details class="accordion" open id="electricalAccordion">
-  <summary class="accordion-header">Electrical Lines</summary>
-  <div class="card-grid-background" data-section-name="Electrical Lines">
-    <div class="card-grid-wrapper">
-      <div class="card-grid" id="electricalGrid"></div>
-    </div>
-  </div>
-</details>
-
-<details class="accordion" id="lightingAccordion">
-  <summary class="accordion-header">Lighting Lines</summary>
-  <div class="card-grid-background" data-section-name="Lighting Lines">
-    <div class="card-grid-wrapper">
-      <div class="card-grid" id="lightingGrid"></div>
-    </div>
-  </div>
-</details>
-
-</section>
 
 
+    <main class="main-section">
+      
 
 
-  <!-- JS: Card Generation -->
-  <script src="/assets/js/cards.js"></script>
+<div class="manufacturer-grid-wrapper">
 
-</main>
+<h1 class="manufacturers-h1">
+  Manufacturers
+</h1>
 
+  <div class="filter-info">
+    <button class="filter-btn">
+    <img src="assets/images/filter.svg">Sort by State</button>
+    <p id="resultsCount"></p>
   </div>
 
-  <!-- ====== FOOTER ====== -->
-  <footer>
-    <div class="footer-contact">
-      <div class="footer-location-container">
-        <img class="social-map" src="/assets/images/Map-Vector.svg" />
-        <p class="location-text">
-          <strong>Irvine, California</strong>
-        </p>
-      </div>
-      <div class="find-us-container">
-        <a href="https://www.linkedin.com/company/august-agents/" target="_blank">
-          <img src="/assets/images/LinkedIn.svg" alt="LinkedIn" class="contact-social">
-        </a>
-        <a href="https://www.instagram.com/augustagents/" target="_blank">
-          <img src="/assets/images/Instagram.svg" alt="Instagram" class="contact-social">
-        </a>
-        <!--
-        <a href="https://www.nemra.org/" target="_blank">
-          <img src="/assets/images/Nemra.png" alt="Nemra" class="contact-social" />
-        </a>
-        -->
-      </div>
-    </div>
-    <div class="copyright-container">
-      <p class="copyright">© Copyright 2026 August Agents</p>
-    </div>
-  </footer>
 
-  <!-- ====== SCRIPTS ====== -->
-  <script src="/assets/js/index.js"></script>
-  <script src="/assets/js/cards.js"></script>
+    <div id="manufacturerGrid"></div>
+</div>
+    </main>
+
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/cards.js"></script>
   <script>
-    function openMenu() {
-      document.getElementById('mobileNav').classList.add('show');
-      document.getElementById('menuOverlay').classList.add('show');
-    }
-
-    function closeMenu() {
-      document.getElementById('mobileNav').classList.remove('show');
-      document.getElementById('menuOverlay').classList.remove('show');
-    }
-
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-
-      document.getElementById('electricalNav')?.addEventListener('click', (e) => {
-        e.preventDefault();
-        scrollToSection('electricalGrid');
-      });
-
-      document.getElementById('lightingNav')?.addEventListener('click', (e) => {
-        e.preventDefault();
-        scrollToSection('lightingGrid');
-      });
-
-      document.getElementById('mobileElectricalNav')?.addEventListener('click', (e) => {
-        e.preventDefault();
-        scrollToSection('electricalGrid');
-      });
-
-      document.getElementById('mobileLightingNav')?.addEventListener('click', (e) => {
-        e.preventDefault();
-        scrollToSection('lightingGrid');
-      });
-    });
   </script>
 
   <!-- Scroll to Top Button -->
@@ -209,7 +147,28 @@
       <polyline points="5 12 12 5 19 12"></polyline>
     </svg>
   </button>
+  <footer>
+    <div class="copyright-container">
+      <p class="copyright">© Copyright 2026 August Agents</p>
+    </div>
+  </footer>
+  <script>
+  const menuToggle = document.querySelector(".mobile-menu-toggle");
+  const menuClose = document.querySelector(".mobile-menu-close");
+  const menuOverlay = document.querySelector(".mobile-menu-overlay");
 
+  menuToggle.addEventListener("click", () => {
+    document.body.classList.add("menu-open");
+  });
+
+  menuClose.addEventListener("click", () => {
+    document.body.classList.remove("menu-open");
+  });
+
+  menuOverlay.addEventListener("click", () => {
+    document.body.classList.remove("menu-open");
+  });
+</script>
 </body>
 
 </html>
