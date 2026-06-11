@@ -1,7 +1,7 @@
 const manufacturers = [
   {
     category: "electrical",
-    logo: "assets/images/manufacturers/elite-components.svg",
+    logo: "/assets/images/manufacturers/elite-components.svg",
     alt: "Elite Components",
     website: "https://elitecomponents.com/",
     catalog: "assets/Linecards/Elite Components Catalog.pdf",

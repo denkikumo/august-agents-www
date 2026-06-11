@@ -288,120 +288,57 @@ body {
   width: auto;
   max-width: 100%;
 }
-
-.state-image {
-  grid-column: 3;
-  justify-self: center;
-  text-align: center;
-  min-width: 0;
-  max-width: 60%;
-  padding: 0;
-}
-.state-svg {
-  width: clamp(220px, 28vw, 500px);
-  max-width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
 .state-btn path {
-fill: url(#glass);
-cursor: pointer;
-pointer-events: visiblePainted;
-transform-origin: center;
-animation:
-  idleGlow 9s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-stroke: rgba(255,255,255,0.25);
-stroke-width: 1.5;
+  fill: url(#glass);
+  cursor: pointer;
+  pointer-events: visiblePainted;
+  transform-origin: center;
 
-filter:
-  drop-shadow(0 0 10px rgba(0, 93, 155, 0.15));
+  stroke: rgba(255,255,255,0.25);
+  stroke-width: 1.5;
   stroke-linejoin: round;
   stroke-linecap: round;
 
-transition:
-  fill 1.2s ease,
-  filter 1s ease,
-  transform 1s ease,
-  stroke-dashoffset 1.7s ease;
+  filter: drop-shadow(0 0 6px rgba(0,93,155,.12));
+
+  transition:
+    fill .4s ease,
+    transform .4s ease,
+    filter .4s ease,
+    stroke-dashoffset .9s ease;
 }
 
 /* California */
 #california {
-  stroke-dasharray: 770 770;
+  stroke-dasharray: 770;
   stroke-dashoffset: 770;
-    animation-delay: 0s;
 }
 
 /* Nevada */
 #nevada {
-  stroke-dasharray: 520 520;
+  stroke-dasharray: 520;
   stroke-dashoffset: 520;
-    animation-delay: 6s;
 }
 
-/* Hover draws the outline */
+/* Hover draws outline */
 .california-btn:hover #california {
   stroke-dashoffset: 0;
 }
 
 .nevada-btn:hover #nevada {
   stroke-dashoffset: 0;
-    animation-delay: 4s;
 }
 
-.california-btn:hover path {
-  fill: #004e81;
-  animation: pulseGlow 2.4s ease-in-out infinite;
-transform: translateY(-1.5px) scale(1.01);
-}
-
+/* Hover effect */
+.california-btn:hover path,
 .nevada-btn:hover path {
   fill: #004e81;
-  animation: pulseGlow 2.4s ease-in-out infinite;
-transform: translateY(-1.5px) scale(1.01);
+  filter: drop-shadow(0 0 10px rgba(0,157,255,.35));
+  transform: translateY(-1.5px) scale(1.01);
 }
 
 .state-btn:active path {
   transform: translateY(1px) scale(0.98);
-}
-
-@keyframes pulseGlow {
-  0% {
-    filter: drop-shadow(0 0 8px rgba(0, 157, 255, 0.35));
-  }
-
-  50% {
-    filter: drop-shadow(0 0 12px rgba(0, 157, 255, 0.65));
-  }
-
-  100% {
-    filter: drop-shadow(0 0 8px rgba(0, 157, 255, 0.35));
-  }
-}@keyframes idleGlow {
-  0% {
-    filter:
-      drop-shadow(0 0 4px rgba(0, 145, 255, 0.00))
-      drop-shadow(0 0 8px rgba(0, 238, 255, 0.00));
-  }
-
-  22% {
-    filter:
-      drop-shadow(0 0 10px rgba(0, 145, 255, 0.22))
-      drop-shadow(0 0 18px rgba(0, 238, 255, 0.18));
-  }
-
-  44% {
-    filter:
-      drop-shadow(0 0 4px rgba(0, 145, 255, 0.00))
-      drop-shadow(0 0 8px rgba(0, 238, 255, 0.00));
-  }
-
-  100% {
-    filter:
-      drop-shadow(0 0 4px rgba(0, 145, 255, 0.00))
-      drop-shadow(0 0 8px rgba(0, 238, 255, 0.00));
-  }
 }
 
 .st-info {
@@ -692,7 +629,7 @@ transform: translateY(-1.5px) scale(1.01);
   padding: 12px;
   display: flex;
   flex-direction: column;
-
+  justify-content: space-between;
   width: 100%;
   min-width: 0;
   height: 250px;
@@ -876,7 +813,11 @@ transform: translateY(-1.5px) scale(1.01);
 }
 
 
-
+@media (max-width: 1000px) {
+  .contact-grid:not(.hierarchy) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
 @media (max-width: 768px) {
 
@@ -1139,18 +1080,14 @@ transform: translateY(-1.5px) scale(1.01);
     margin-bottom: 24px;
   }
 
-  .contact-grid {
+  .contact-grid,
+  .contact-grid.hierarchy,
+  .contact-grid:not(.hierarchy) {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-    .contact-grid.hierarchy,
-  .contact-grid:not(.hierarchy) {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 1000px) {
-  .contact-grid:not(.hierarchy) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .contact-card {
+    padding: 20px;
   }
 }
