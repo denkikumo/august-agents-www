@@ -999,13 +999,15 @@ body {
     margin: 0 auto;
   }
 
-  .st-info {
-    margin-top: 16px;
-    font-size: 1rem;
-    color: #787878;
-    text-align: center;
-    white-space: nowrap;
-  }
+.st-info {
+  margin-top: 16px;
+  font-size: 1rem;
+  color: #787878;
+  text-align: center;
+
+  white-space: normal;
+  max-width: 100%;
+}
 
   .mobile-footer-info {
     display: flex;
