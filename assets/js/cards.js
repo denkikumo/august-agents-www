@@ -4,7 +4,7 @@ const manufacturers = [
     logo: "/assets/images/manufacturers/elite-components.svg",
     alt: "Elite Components",
     website: "https://elitecomponents.com/",
-    catalog: "/assets/linecards/elite-components-catalog.pdf",
+    catalog: "https://elitecomponents.com/wp-content/uploads/Elite-Electrical-Fasteners-Quick-Reference-Guide.pdf",
     description: "Electrical Fasteners, Plastic Boxes, Strut Accessories, Local Strut & All Thread Inventory",
     freight: "$500",
     territory: "CA, NV",
