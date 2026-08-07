@@ -80,7 +80,7 @@ content="August Agents represents leading electrical and lighting manufacturers 
       <nav class="navbar">
         <ul class="nav-links">
           <li><a href="/manufacturers">Manufacturers</a></li>
-          <li><a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">Full Linecard</a></li>
+          <li><a href="#" class="linecards-open">All Linecards</a></li>
 
           <li><a href="/contact.html">Contact</a></li>
         </ul>
@@ -98,8 +98,30 @@ content="August Agents represents leading electrical and lighting manufacturers 
   </div>
 
   <a href="/manufacturers">Manufacturers</a>
+  <a href="#" class="linecards-open">All Linecards</a>
   <a href="/contact">Contact</a>
 </nav>
+
+<!-- Linecards Modal -->
+<div class="linecards-modal" id="linecardsModal" role="dialog" aria-modal="true" aria-labelledby="linecardsTitle">
+  <div class="linecards-modal-content">
+    <button class="linecards-close" type="button" aria-label="Close">&times;</button>
+
+    <h2 id="linecardsTitle">All Linecards</h2>
+    <p>Select a linecard to view:</p>
+
+    <div class="linecards-links">
+      <a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank" rel="noopener">
+        August Agents Linecard
+      </a>
+
+      <a href="/assets/Linecards/Titan Line Card.pdf" target="_blank" rel="noopener">
+        Titan Line Card
+      </a>
+
+    </div>
+  </div>
+</div>
 
   <main class="site-content-contact">
     <h1 class="page-title">Agency Contact Info</h1>
@@ -138,6 +160,34 @@ content="August Agents represents leading electrical and lighting manufacturers 
 
   menuOverlay.addEventListener("click", () => {
     document.body.classList.remove("menu-open");
+  });
+
+  const linecardsModal = document.getElementById("linecardsModal");
+  const linecardsOpen = document.querySelectorAll(".linecards-open");
+  const linecardsClose = linecardsModal.querySelector(".linecards-close");
+
+  linecardsOpen.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.remove("menu-open");
+      linecardsModal.classList.add("active");
+    });
+  });
+
+  linecardsClose.addEventListener("click", function () {
+    linecardsModal.classList.remove("active");
+  });
+
+  linecardsModal.addEventListener("click", function (e) {
+    if (e.target === linecardsModal) {
+      linecardsModal.classList.remove("active");
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      linecardsModal.classList.remove("active");
+    }
   });
 </script>
 </body>

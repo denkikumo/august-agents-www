@@ -486,3 +486,59 @@ document.addEventListener("DOMContentLoaded", () => {
     filterBtn.addEventListener("click", openStateFilterModal);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!manufacturerGrid) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const stateFromUrl = params.get("state") || "all";
+
+  renderManufacturers(manufacturers, stateFromUrl);
+
+  const filterBtn = document.querySelector(".filter-btn");
+
+  if (filterBtn) {
+    filterBtn.addEventListener("click", openStateFilterModal);
+  }
+});
+
+
+// ========================================
+// LINECARDS MODAL
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("linecardsModal");
+  const openButtons = document.querySelectorAll(".linecards-open");
+  const closeButton = modal?.querySelector(".linecards-close");
+
+  if (!modal || !closeButton) return;
+
+  openButtons.forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Close hamburger menu
+      document.body.classList.remove("menu-open");
+
+      // Open modal
+      modal.classList.add("active");
+    });
+  });
+
+  closeButton.addEventListener("click", function () {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      modal.classList.remove("active");
+    }
+  });
+});

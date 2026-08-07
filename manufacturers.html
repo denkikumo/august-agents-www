@@ -85,7 +85,7 @@
       <nav class="navbar">
         <ul class="nav-links">
           <li><a href="/manufacturers">Manufacturers</a></li>
-          <li><a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank">Full Linecard</a></li>
+          <li><a href="#" class="linecards-open">All Linecards</a></li>
 
           <li><a href="/contact">Contact</a></li>
         </ul>
@@ -104,8 +104,30 @@
   </div>
 
   <a href="/manufacturers">Manufacturers</a>
+  <a href="#" class="linecards-open">Linecards</a>
   <a href="/contact">Contact</a>
 </nav>
+
+<!-- Linecards Modal -->
+<div class="linecards-modal" id="linecardsModal" role="dialog" aria-modal="true" aria-labelledby="linecardsTitle">
+  <div class="linecards-modal-content">
+    <button class="linecards-close" type="button" aria-label="Close">&times;</button>
+
+    <h2 id="linecardsTitle">Linecards</h2>
+    <p>Select a linecard to view:</p>
+
+    <div class="linecards-links">
+      <a href="/assets/Linecards/August Agents Line Card.pdf" target="_blank" rel="noopener">
+        August Agents Linecard
+      </a>
+
+      <a href="/assets/Linecards/Titan Line Card.pdf" target="_blank" rel="noopener">
+        Titan Line Card
+      </a>
+
+    </div>
+  </div>
+</div>
 
     <div class="header-spacer"></div>
 
@@ -167,6 +189,35 @@
 
   menuOverlay.addEventListener("click", () => {
     document.body.classList.remove("menu-open");
+  });
+
+  const linecardsModal = document.getElementById("linecardsModal");
+  const linecardsOpenButtons = document.querySelectorAll(".linecards-open");
+  const linecardsClose = linecardsModal.querySelector(".linecards-close");
+
+  linecardsOpenButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      document.body.classList.remove("menu-open");
+      linecardsModal.classList.add("active");
+    });
+  });
+
+  linecardsClose.addEventListener("click", () => {
+    linecardsModal.classList.remove("active");
+  });
+
+  linecardsModal.addEventListener("click", (event) => {
+    if (event.target === linecardsModal) {
+      linecardsModal.classList.remove("active");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      linecardsModal.classList.remove("active");
+    }
   });
 </script>
 </body>
